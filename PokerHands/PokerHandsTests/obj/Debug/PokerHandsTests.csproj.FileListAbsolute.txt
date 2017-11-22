@@ -1,0 +1,9 @@
+C:\Programming\PokerHands\PokerHands\PokerHandsTests\bin\Debug\PokerHandsTests.dll
+C:\Programming\PokerHands\PokerHands\PokerHandsTests\bin\Debug\PokerHandsTests.pdb
+C:\Programming\PokerHands\PokerHands\PokerHandsTests\bin\Debug\nunit.framework.dll
+C:\Programming\PokerHands\PokerHands\PokerHandsTests\bin\Debug\PokerHands.exe
+C:\Programming\PokerHands\PokerHands\PokerHandsTests\bin\Debug\PokerHands.pdb
+C:\Programming\PokerHands\PokerHands\PokerHandsTests\bin\Debug\nunit.framework.xml
+C:\Programming\PokerHands\PokerHands\PokerHandsTests\obj\Debug\PokerHandsTests.csprojResolveAssemblyReference.cache
+C:\Programming\PokerHands\PokerHands\PokerHandsTests\obj\Debug\PokerHandsTests.dll
+C:\Programming\PokerHands\PokerHands\PokerHandsTests\obj\Debug\PokerHandsTests.pdb
