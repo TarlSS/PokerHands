@@ -18,6 +18,14 @@ namespace PokerHands
     /// the side of maintainability. Additionally, for an interview exercise I believe it is 
     /// better to show off code and design
     /// 
+    /// Project Layout: The code for the poker hands is in the "PokerHands" project, and the test code
+    /// is in "PokerHandsTests" which references PokerHands.
+    /// 
+    /// Usage: The driver program doesn't do anything. Instead, run the NUnit tests. If you ran the solution
+    /// in Visual Studio from the git, it should automatically download NUnit. If not, add the NUnit reference 
+    /// onthe PokerHandsTests. I run the tests using the NUnit Visual Studio plugin, but you may run them 
+    /// with whatever tool you like
+    /// 
     /// Testing: I have only implemented some unit tests for convenience. Ideally we would want
     /// 100% code coverage but that's too much labor for an interview question. I have provided
     /// the included tests for code-style evaluation.
@@ -30,10 +38,14 @@ namespace PokerHands
     /// Comments: As per Clean Code by Robert C. Martin, I only add comments where necessary and let
     /// the code be the comment. I can adapt to a different style if necessary.
     /// 
+    /// NOTES ON GAME RULES
+    /// 
     /// Jokers: As this is an interview evaluation, I have elected to use casino rules and to not include jokers.
-    /// Adding jokers would add more labor and require me to write a significant amount of test cases for them.
+    /// Adding jokers would add more labor and require me to write a significant amount of edge and test cases for them.
     /// However we could extend the evaluation classes to change our verification algorithms to allow jokers.
     /// I added an example of a possible joker extension in FlushEvaluator and the Flush tests under PokerHandsTests
+    /// 
+    /// 5 of a Kind: Because I elected not to use jokers, 5 a kind is not implemented here.
     /// 
     /// Cheating/Multideck: I don't account for cheating or multiple decks, as that is outside the scope of the test. 
     /// This means it's possible to hands like 4 of a kind with all cards in the same suite if you set it up that way.
@@ -41,8 +53,13 @@ namespace PokerHands
     /// 
     /// Aces: Aces are not high for this program
     /// 
+    /// Driver Program: The driver program doesn't do anything other than print out a random hand. This code
+    /// is more suited to a dll/library, however I included a console program so something could run
+    /// 
+    /// 
     /// Author: Alex Lau
     /// </summary>
+    /// 
     class Program
     {
         static void Main(string[] args)
