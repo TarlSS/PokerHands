@@ -11,11 +11,6 @@ namespace PokerHands.Logic
     {
         //Is this a valid version of the hand?
         bool isValid(Hand hand);
-        /// <summary>
-        /// Return 1, 0 or -1 depending on comparable
-        /// </summary>
-        /// <param name="x"></param>
-        /// <param name="y"></param>
-        /// <returns></returns>
+
     }
 }

@@ -154,8 +154,5 @@ namespace PokerHandsTests
             Hand y = new Hand(cards2);
             Assert.AreEqual(1, hc.Compare(x, y));
         }
-
-
-
     }
 }

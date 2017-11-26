@@ -53,5 +53,10 @@ namespace PokerHands.Logic
             return highCard;
         }
 
+        public override string ToString()
+        {
+            return "Pair";
+        }
+
     }
 }

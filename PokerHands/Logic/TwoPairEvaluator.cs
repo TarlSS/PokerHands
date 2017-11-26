@@ -38,5 +38,10 @@ namespace PokerHands.Logic
             return false;
         }
 
+        public override string ToString()
+        {
+            return "Two pair";
+        }
+
     }
 }

@@ -1,4 +1,5 @@
-﻿using PokerHands.Models;
+﻿using PokerHands.Logic;
+using PokerHands.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -53,8 +54,8 @@ namespace PokerHands
     /// 
     /// Aces: Aces are not high for this program
     /// 
-    /// Driver Program: The driver program doesn't do anything other than print out a random hand. This code
-    /// is more suited to a dll/library, however I included a console program so something could run
+    /// Driver Program: The driver program generates two hands, lists what the hands are and then tells us 
+    /// the winning hand. Press q to quit or any key to generate hands
     /// 
     /// 
     /// Author: Alex Lau
@@ -64,16 +65,36 @@ namespace PokerHands
     {
         static void Main(string[] args)
         {
-            Card[] cards = new Card[5];
-            for(int i = 0; i < 5; i++)
+            char input;
+            
+            do
             {
-                cards[i] = Card.Random();
-            }
+                Console.WriteLine("Hit q to quit or any key to generate hands");
+                HandComparer handcomp = new HandComparer();
+                Hand x = Hand.CreateHand();
+                Hand y = Hand.CreateHand();
 
-            Hand hand = new Hand(cards);
-            hand.Print();
+                Console.WriteLine("Hand X:" + handcomp.GetHandType(x) +" "+ x.highCard.ToString());
+                x.Print();
+                Console.WriteLine("Hand y:" + handcomp.GetHandType(y) +" "+ y.highCard.ToString());
+                y.Print();
+                int result = handcomp.Compare(x, y);
+                string winner;
+                if (result == 1)
+                {
+                    winner = "X";
+                }else if (result == -1)
+                {
+                    winner = "Y";
+                }else
+                {
+                    winner = "Tie";
+                }
+                Console.WriteLine("Winner:"+winner);
 
-            Console.ReadKey();
+                input = Console.ReadKey().KeyChar;
+            } while (input != 'q');
         }
+
     }
 }

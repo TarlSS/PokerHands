@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace PokerHands.Models
 {
-    public enum Suite { H,S, C, D};
+    public enum Suite {H, S, C, D};
 
     /// <summary>
     /// Represents cards.

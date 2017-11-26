@@ -56,33 +56,50 @@ namespace PokerHands.Logic
             throw new NotImplementedException();
         }
 
-        public int Compare(Hand x, Hand y)
+        /// <summary>
+        /// Get the score of this hand.
+        /// Based on the order of evaluators, ordered from top to bottom
+        /// </summary>
+        /// <param name="hand"></param>
+        /// <returns></returns>
+        public int GetScore(Hand hand)
         {
-            int xScore = 0;
-            int yScore = 0;
-
-            for(int i = evals.Count-1; i >=0; i--)
+            for (int i = evals.Count - 1; i >= 0; i--)
             {
                 HandEvaluator eval = evals[i];
-                if (eval.isValid(x) && i>xScore)
+                if (eval.isValid(hand))
                 {
-                    xScore = i;
-                }
-                if (eval.isValid(y) && i>yScore)
-                {
-                    yScore = i;
-                }
-                if(xScore>0 && yScore > 0)
-                {
-                    break;
+                    return i;
                 }
             }
+            return -1;
+        }
+
+        public string GetHandType(Hand hand)
+        {
+            int score = GetScore(hand);
+            return evals[score].ToString();
+        }
+
+        /// <summary>
+        /// Compares one hand to another
+        /// </summary>
+        /// <param name="x"></param>
+        /// <param name="y"></param>
+        /// <returns></returns>
+        public int Compare(Hand x, Hand y)
+        {
+            int xScore = GetScore(x);
+            int yScore = GetScore(y);
+
+            //If both hands are of the same type (eg 2 full houses) then 
+            //we need to compare them hand-to-hand (eg high card in a full house)
             if (xScore == yScore)
             {
                 HandEvaluator eval = evals[xScore];
                 return eval.Compare(x, y);
             }
-
+            //Else one hand is > then the other (full house vs two pair)
             return xScore.CompareTo(yScore);
         }
         

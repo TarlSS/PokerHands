@@ -14,5 +14,10 @@ namespace PokerHands.Logic
             numToCheck = 4;
         }
 
+        public override string ToString()
+        {
+            return "Four of a kind";
+        }
+
     }
 }

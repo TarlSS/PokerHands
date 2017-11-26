@@ -14,5 +14,10 @@ namespace PokerHands.Logic
             return true;
         }
 
+        public override string ToString()
+        {
+            return "High Card";
+        }
+
     }
 }

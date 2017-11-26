@@ -11,6 +11,8 @@ namespace PokerHands.Models
     /// </summary>
     public class Hand
     {
+        //What do we call this card? FullHouse, Straight, etc
+        public string label;
         public Card[] cards;
         //What's our high card? Hand evaluators can change this for fullHouse, 3 Kind and 4 Kind
         public Card highCard;
@@ -25,6 +27,18 @@ namespace PokerHands.Models
             SortCards();
             //Since we sort, the high card is initially the last (largest) one.
             highCard = cards[4];
+        }
+
+        public static Hand CreateHand()
+        {
+            Card[] cards = new Card[5];
+            for (int i = 0; i < 5; i++)
+            {
+                cards[i] = Card.Random();
+            }
+
+            Hand hand = new Hand(cards);
+            return hand;
         }
 
         /// <summary>

@@ -50,5 +50,10 @@ namespace PokerHands.Logic
         {
             return x.highCard.rank.CompareTo(y.highCard.rank);
         }
+
+        public override string ToString()
+        {
+            return "Flush";
+        }
     }
 }

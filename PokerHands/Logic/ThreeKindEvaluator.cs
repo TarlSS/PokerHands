@@ -13,6 +13,9 @@ namespace PokerHands.Logic
         {
             numToCheck = 3;
         }
-
+        public override string ToString()
+        {
+            return "Three of a kind";
+        }
     }
 }
