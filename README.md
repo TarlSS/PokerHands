@@ -23,10 +23,9 @@ Pokerhands is divided up into 3 folders, Logic, Models and Utility. The Models c
 The Logic class holds the HandEvaluator interface, HandEvaluators and the HandComparer. The HandComparer uses these
 evaluators to determine the highest poker hand for each Hand and can compare two Hands and declare a winner. 
 
-Usage: The driver program doesn't do anything. Instead, run the NUnit tests. If you ran the solution
-in Visual Studio from the git, it should automatically download NUnit. If not, add the NUnit reference 
-onthe PokerHandsTests. I run the tests using the NUnit Visual Studio plugin, but you may run them 
-with whatever tool you like
+Usage: You can run the driver program to randomly generate 2 hands and test them. You can also use NUnit to run
+the included tests. This project is a Visual Studio C# Solution and contains a Console Project and a Unit Test Project
+Clone the repository and run the solution.
 
 Testing: I have only implemented some unit tests for convenience. Ideally we would want
 100% code coverage but that's too much labor for an interview question. I have provided
@@ -57,6 +56,5 @@ Aces: Aces are not high for this program
 
 Driver Program: The driver program generates two hands, lists what the hands are and then tells us 
 the winning hand. Press q to quit or any key to generate hands
-
 
 Author: Alex Lau
