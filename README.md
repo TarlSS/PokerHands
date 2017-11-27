@@ -59,6 +59,7 @@ There are likely strange combos due to this, I'm letting it go to account for la
 Aces Low: Aces are not high for this program. They evaluate as 1. Straights with aces high have not been included in the Straight evaluator.
 
 Driver Program: The driver program generates two hands, lists what the hands are and then tells us 
-the winning hand. Press q to quit or any key to generate hands.
+the winning hand. The program does not use a legal deck, it just generates 5 cards randomly for each hand.
+Press q to quit or any key to generate hands.
 
 Author: Alex Lau
