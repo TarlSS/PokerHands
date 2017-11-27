@@ -15,7 +15,7 @@ As a design choice, this program was made for readability and modularity rather 
 optimized performance. It is possible to create highly optimized card readers with 
 tricks like bit registers/etc, but since modern devices are so fast I have erred on
 the side of maintainability. Additionally, for an interview exercise I believe it is 
-better to show off code and design
+better to show off code and design.
 
 Project Layout: The code for the poker hands is in the "PokerHands" project, and the test code
 is in "PokerHandsTests" which references PokerHands.
@@ -41,10 +41,14 @@ the code be the comment. I can adapt to a different style if necessary.
 
 NOTES ON GAME RULES
 
+Legal Deck Construction: This library is independant of card decks and deck construction. No methods or ability to create a standard
+52 card deck have been included. This was a deliberate choice as decks are outside the bounds of the assignment, and also to 
+allow for the possibility of games that don't utilize standard decks. (Four deck Poker, games like Malifaux and Deadlands)
+
 Jokers: As this is an interview evaluation, I have elected to use casino rules and to not include jokers.
 Adding jokers would add more labor and require me to write a significant amount of edge and test cases for them.
 However we could extend the evaluation classes to change our verification algorithms to allow jokers.
-I added an example of a possible joker extension in FlushEvaluator and the Flush tests under PokerHandsTests
+I added an example of a possible joker extension in FlushEvaluator and the Flush tests under PokerHandsTests.
 
 5 of a Kind: Because I elected not to use jokers, 5 a kind is not implemented here.
 
@@ -52,9 +56,9 @@ Cheating/Multideck: I don't account for cheating or multiple decks, as that is o
 This means it's possible to hands like 4 of a kind with all cards in the same suite if you set it up that way.
 There are likely strange combos due to this, I'm letting it go to account for labor.
 
-Aces: Aces are not high for this program
+Aces: Aces are not high for this program. They evaluate as 1. Straights with aces high have not been included in the Straight evaluator.
 
 Driver Program: The driver program generates two hands, lists what the hands are and then tells us 
-the winning hand. Press q to quit or any key to generate hands
+the winning hand. Press q to quit or any key to generate hands.
 
 Author: Alex Lau
