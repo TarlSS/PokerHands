@@ -2,7 +2,9 @@
 
 
 EA Test evalation for Poker Hands. Based on standard poker, no variations. (Not hold'm, no river)
+
 Test: https://docs.google.com/document/d/1PPYM_fCUFjFQlUX4PCCwknQdfgde8GCDH10jD0kh-5c/edit
+
 Hands: https://en.wikipedia.org/wiki/List_of_poker_hands
 
 Etymology note: A "Hand" refers to both a hand of cards (eg the 5 cards physically in a player's hand) as well as
